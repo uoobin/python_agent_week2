@@ -28,11 +28,11 @@ class SimpleMiddleware(object):
         latency = timestamp - start_time
 
         transaction_data = {
-            'timestamp':int(timestamp),
+            'timestamp':int(timestamp)*1000,
             'method':method,
             'url':url,
             'status_code':status_code,
-            'latency':latency
+            'latency':latency*1000
         }
 
         transaction_data = json.dumps(transaction_data)

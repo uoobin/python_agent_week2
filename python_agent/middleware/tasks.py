@@ -6,7 +6,7 @@ import time
 import json
 import requests
 
-@background(schedule=0)
+@background(schedule=1)
 def get_usage():
     process = psutil.Process(os.getpid())
 
